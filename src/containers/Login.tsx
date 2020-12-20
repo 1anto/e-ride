@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react';
 import fire from "../helper/base";
-import "../App.css";
 
 const Link = require("react-router-dom").Link;
 
@@ -23,19 +22,19 @@ const Login = (props:any) => {
       <div className="loginContainer">
         <label>User name</label>
         <input type="text" autoFocus required value={email} onChange={(e) => setEmail(e.target.value)}/>
-        <p className="errorMessage">{emailError}</p>
+        <p className="errorMsg">{emailError}</p>
         <label>Password</label>
         <input type="password" required value={password} onChange={(e) => setPassword(e.target.value)}/>
-        <p className="errorMessage">{passwordError}</p>
+        <p className="errorMsg">{passwordError}</p>
         <div className="btnContainer">
           {hasAccount ? (
             <>
-              <button onClick={handleLogin}>Sign in</button>
+              <button className="auth-submit-btn" onClick={handleLogin}>Sign in</button>
               <p>Don't have an account ? <span onClick={() => setHasAccount(!hasAccount)}>Sign up</span></p>
             </>
           ) : (
             <>
-              <button onClick={handleSignup}>Sign up</button>
+              <button className="auth-submit-btn" onClick={handleSignup}>Sign up</button>
               <p>Already have an account ? <span onClick={() => setHasAccount(!hasAccount)}>Sign in</span></p>
             </>
           )}

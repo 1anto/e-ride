@@ -93,12 +93,22 @@ function App() {
     <div className="App">
       {user ? (
         // <Dashboard handleLogout={() => handleLogout}/>
-        <>
+      // <Route exact path="/"><Login/></Route>
 
-      {/* <Route exact path="/"><Login/></Route> */}
-      <Route path="/signUp"><SignUp/></Route>
-      <Route exact path="/"><Dashboard handleLogout={() => handleLogout}/></Route>
-      <Route path="/details/:id"><DetailsPage/></Route>
+        <>
+          <header className="app-header">
+            <Navbar handleLogout={() => handleLogout}/>
+          </header>
+          
+          <main>
+            <Route path="/signUp"><SignUp/></Route>
+            <Route exact path="/"><Dashboard/></Route>
+            <Route path="/details/:id"><DetailsPage/></Route>
+          </main>
+          
+          <footer>
+            
+          </footer>
         </>
       ) : (
         <Route exact path="/">
@@ -116,7 +126,6 @@ function App() {
         </Route>
       )}
 
-      {/* <Navbar/> */}
 
 
       { /* Route components are rendered if the path prop matches the current URL */}
