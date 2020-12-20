@@ -92,8 +92,9 @@ function App() {
   return (
     <div className="App">
       {user ? (
-        // <Dashboard handleLogout={() => handleLogout}/>
+      // <Dashboard handleLogout={() => handleLogout}/>
       // <Route exact path="/"><Login/></Route>
+      // <Route path="/signUp"><SignUp/></Route>
 
         <>
           <header className="app-header">
@@ -101,11 +102,10 @@ function App() {
           </header>
           
           <main>
-            <Route path="/signUp"><SignUp/></Route>
             <Route exact path="/"><Dashboard/></Route>
             <Route path="/details/:id"><DetailsPage/></Route>
           </main>
-          
+
           <footer>
             
           </footer>

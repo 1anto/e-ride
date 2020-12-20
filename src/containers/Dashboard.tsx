@@ -7,9 +7,7 @@ import MG from "../assets/MG-ZS-EV.png";
 
 const Dashboard = (props: any) => {
     // const {} = props;
-    const n = 3; // Or something else
-
-[...Array(n)].map((e, i) => <span className="busterCards" key={i}>♦</span>)
+    const n = 5; // Or something else
 
     return (
         <>
