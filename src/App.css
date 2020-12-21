@@ -111,7 +111,7 @@
   max-width: 10rem;
 }
 
-.navbar-nav {
+.custom-navbar-nav {
   display: flex;
   list-style: none;
 }
@@ -126,7 +126,7 @@
   border: none;
 }
 
-.nav-btn.selected {
+.nav-btn:focus {
   /* color: rgb(204, 6, 98); */
   color: #ff7bac;
 }
@@ -266,6 +266,42 @@ ul.breadcrumb li a:hover {
 
 .submit-btn {
   text-align: center;
-  padding: 1rem;
+  padding: 1rem 2rem;
   font-size: medium;
+}
+
+/* Suitability tool */
+.suit-progress {
+  margin: 2rem 3rem;
+}
+
+.suit-content {
+  font-size: large;
+}
+
+.right-btn {
+  float: right;
+  margin-right: 3rem;
+}
+
+.left-btn {
+  float: left;
+  margin-left: 3rem;
+}
+
+.radio-grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.big-btn {
+  min-width: 500px;
 }

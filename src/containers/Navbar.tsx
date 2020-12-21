@@ -12,16 +12,22 @@ function Navbar(props: any) {
         <h1>e-Ride</h1>
       </Link>
 
-      <nav className="navbar navbar-light">
-        <ul className="nav navbar-nav">
+      <nav className="custom-navbar custom-navbar-light">
+        <ul className="nav custom-navbar-nav">
           <li>
-            <button className="nav-btn selected">Electric Cars</button>
+            <Link to="/">
+              <button className="nav-btn">Electric Cars</button>
+              </Link>
           </li>
           <li>
-            <button className="nav-btn">Suitability Tool</button>
+            <Link to="/suitability-tool">
+              <button className="nav-btn">Suitability Tool</button>
+            </Link>
           </li>
           <li>
-            <button className="nav-btn">My bookings</button>
+            <Link to="/my-bookings">
+              <button className="nav-btn">My bookings</button>
+            </Link>
           </li>
           <li>
             <button className="nav-btn" onClick={handleLogout()}>Sign Out</button>

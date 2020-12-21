@@ -1,17 +1,19 @@
 import React, {useState, useEffect} from 'react';
 import fire from "./helper/base";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css";
 
 import Navbar from "./containers/Navbar";
-import Pokemon from "./containers/Pokemon";
+// import Pokemon from "./containers/Pokemon";
 import Login  from "./containers/Login";
-import DetailsPage from "./containers/DetailsPage";
 import Dashboard from "./containers/Dashboard";
-import SignUp from './containers/SignUp';
+import DetailsPage from "./containers/DetailsPage";
+import SuitabilityTool from "./containers/SuitabilityTool";
+// import SignUp from './containers/SignUp';
 
-const BrowserRouter = require("react-router-dom").BrowserRouter;
+// const BrowserRouter = require("react-router-dom").BrowserRouter;
 const Route = require("react-router-dom").Route;
-const Link = require("react-router-dom").Link;
+// const Link = require("react-router-dom").Link;
 
 function App() {
 
@@ -104,6 +106,7 @@ function App() {
           <main>
             <Route exact path="/"><Dashboard/></Route>
             <Route path="/details/:id"><DetailsPage/></Route>
+            <Route path="/suitability-tool"><SuitabilityTool /></Route>
           </main>
 
           <footer>
